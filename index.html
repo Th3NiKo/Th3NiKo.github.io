@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Game Of Life</title>
-<meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="style.css">
-<script type="text/javascript" src="scripts.js"></script>
-
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Joournal It</title>
+	<link rel="stylesheet" href="style.css">
+ <!-- <link rel="stylesheet" href="http://basehold.it/24"> -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+</head>
 <body>
 <main>
 	<header>
-		GAME OF LIFE
+		<h1>Journal</h1>
+		<p>To keep your things in one place</p>
+		
 	</header>
-	<p>To start a presentation randomize some pixels on a board and click PLAY button.</p>
-	<div id="board">
-	<canvas id="mapa" width="900" height="600" style="border:1px solid white;">not working</canvas>
-	
-	</div>
-	</br>
-	<div id="buttons">
-	<input type="button" value="RANDOMIZE" class="zapytanie" onclick="randomize()" />
-	<input id="turnoff" type="button" value="PLAY" class="zapytanie" onclick="play()" />
-	<input type="button" value="CLEAR" class="zapytanie" onclick="location.href='index.html'" />
-	<input id="colors" type="button" value="SWAP COLOR" class="zapytanie" onclick="swapColor()" />
-	<input id="newColor" type="button" value="CHANGE COLORS" class="zapytanie" onclick="newColor()" />
-	<div id="kolorowanie">
-	#Color1: <input id="bg" type="color" value="#000000" />
-	#Color2: <input id="pixel" type="color" value="#ffffff"/>
-	</div>
-	</div>
-	<div style="clear:both"> </div>
-	<fotter>Wszelkie prawa zastrzeżone 2016</fotter>
-	
-	
-<main>
 
+	<div id="inputs">
+		<form action="#">
+				<textarea id="textinput" rows="20" cols="100">Write your own story there Write your own story there Write your own story there Write your own story there</textarea> 
+				<button id="add-new" value="submit">Save this story</button>
+				<button id="delete-all" value="submit">Delete selected</button>
+		</form>
+	</div>
 
+	<div id="containeirs">
+	
+			<ul>
+			<li>
+			<h3>Monday, 17.11.2016 11:45</h3>
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies lorem non quam ornare, et hendrerit leo pellentesque. In et dolor quis ante feugiat pharetra. Duis ac tortor ex. Aliquam et arcu rhoncus, ultricies justo eu, faucibus justo. Mauris venenatis lobortis ultricies. Proin quam leo, volutpat non risus rhoncus, condimentum euismod enim. Proin interdum finibus lorem, a feugiat ante fringilla quis. Donec vel egestas ipsum. Duis mollis molestie diam ac congue. Nullam nibh lacus, pharetra vitae aliquet sit amet, gravida at dui. Quisque feugiat quam eu nunc tempor, nec lacinia odio iaculis. Donec sit amet sem lectus. Maecenas sit amet varius ipsum. Vivamus fermentum metus ac lorem malesuada porta. </p>
+			<form action="#">
+				<div id="delete"> Delete:  <input type="checkbox"></div>
+			</form>
+			</li>
 
+			<li>
+			<h3>Thursday, 13.11.2016 13:31</h3>
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies lorem non quam ornare, et hendrerit leo pellentesque. In et dolor quis ante feugiat pharetra. Duis ac tortor ex. Aliquam et arcu rhoncus, ultricies justo eu, faucibus justo. Mauris venenatis lobortis ultricies. Proin quam leo, volutpat non risus rhoncus, condimentum euismod enim. Proin interdum finibus lorem, a feugiat ante fringilla quis. Donec vel egestas ipsum. Duis mollis molestie diam ac congue. Nullam nibh lacus, pharetra vitae aliquet sit amet, gravida at dui. Quisque feugiat quam eu nunc tempor, nec lacinia odio iaculis. Donec sit amet sem lectus. Maecenas sit amet varius ipsum. Vivamus fermentum metus ac lorem malesuada porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies lorem non quam ornare, et hendrerit leo pellentesque. In et dolor quis ante feugiat pharetra. Duis ac tortor ex. Aliquam et arcu rhoncus, ultricies justo eu, faucibus justo. Mauris venenatis lobortis ultricies. Proin quam leo, volutpat non risus rhoncus, condimentum euismod enim. Proin interdum finibus lorem, a feugiat ante fringilla quis. Donec vel egestas ipsum. Duis mollis molestie diam ac congue. Nullam nibh lacus, pharetra vitae aliquet sit amet, gravida at dui. Quisque feugiat quam eu nunc tempor, nec lacinia odio iaculis. Donec sit amet sem lectus. Maecenas sit amet varius ipsum. Vivamus fermentum metus ac lorem malesuada porta. </p>
+			<form action="#">
+				<div id="delete"> Delete:  <input class="checkBoxDelete" type="checkbox"></div>
+			</form>
+			</li>
+			</ul>
+	</div>
+</main>
 </body>
-
 </html>
