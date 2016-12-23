@@ -5,8 +5,6 @@ $line-height-base = 26
 
 html {
 
-	font-size: 62.5%;
-	line-height: 1.625;
 	font-family: 'PT Serif', serif;
 	color: white;
 }
@@ -21,45 +19,46 @@ body {
 main {
 	max-width: 768px;
 	margin: 0 auto;
-
 }
 
 h1 {
 
 	text-align: center;
-	font-size: 10rem;
-	line-height: 3rem;
+	font-size: 	4rem;
+	line-height: 5rem;
 	color: white;
 	transition: 1s font-size;
 }
 
 h3 {
 	text-align: center;
-	font-size: 4.3rem;
+	font-size: 2rem;
 	line-height: 5rem;
 }
 
-header p {
+p {
 	text-align: center;
-	font-size: 2rem;
-	line-height: 3rem;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	max-width: 32rem;
 }
 textarea {
 	 background-color:#1c211d; 
 	 color:white;
 	 box-sizing: border-box;
 	 max-width: 100%;
-	 line-height: 3rem;
-	 margin-top: 3rem;
-	 font-size: 2rem;
+	 line-height: 1rem;
+	 margin-top: 2rem;
+	 padding-top: 1rem;
+	 font-size: 1rem;
 	 border-style: dotted;
 }
 #text-input {
 	margin: 1rem;
-	text-align: justify;s
+	text-align: justify;
 	height: auto;
 	display: table-cell;
-	width: calc(100% - 72rem);
+	width: calc(100% - 24rem);
 }
 
 li {
@@ -72,11 +71,11 @@ li {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 1.5rem 3rem;
+    padding: 0.75rem 0.75rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 1rem;
     cursor: pointer;
 
@@ -94,11 +93,11 @@ li {
     background-color: #f44336; /* red */
     border: none;
     color: white;
-    padding: 1.5rem 3rem;
+     padding: 0.75rem 0.75rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     cursor: pointer;
 
 }
@@ -113,30 +112,24 @@ li {
 }
 #inputs {
 	text-align: center;
-	margin-bottom: 15rem;
+	margin-bottom: 4rem;
 
 
 }
 
-#delete {
-	font-size: 1.5rem;
-	line-height: 3rem;
+.delete {
+	
+	line-height: 1rem;
 	text-align: right;
-	margin-bottom: 8rem;
+	margin-bottom: 3rem;
 }
 
 div p {
 
-	font-size: 2rem;
-	line-height: 3rem;
 	text-align: justify;
 }
 
 
-input[type="checkbox"]{
-    width: 1.5rem;
-    height: 1.5rem;
-    
-}
+
 
 
