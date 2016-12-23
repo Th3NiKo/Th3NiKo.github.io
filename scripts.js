@@ -1,4 +1,17 @@
 
+//MAIN SETTINGS
+var weekday = new Array(7);
+weekday[0] =  "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+
+
+
+
 
 var tablica = [];
 
@@ -10,6 +23,7 @@ addButton.addEventListener("click", addElement, true);
 //deleteButton.addEventListener("click", deleteElements, true);
 
 //Drawing things on list
+
 function render()
 {
 	// Clearing
@@ -41,10 +55,12 @@ function addElement()
 	var tekstInput = document.getElementById("textinput");
 	if(tekstInput.value != "")
 	{
+		var dateDay = new Date();
+		var n = weekday[dateDay.getDay()];
 	    var date = new Date().toJSON().slice(0,10);
 		var obiekt = {
 			tekst: "<p>" + tekstInput.value + "</p>" , 
-			data: "<h3>" + date +"</h3>"
+			data: "<h3>" +  n + ", "+ date +"</h3>"
 		}
 
 
