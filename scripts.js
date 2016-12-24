@@ -59,7 +59,7 @@ function addElement()
 		var n = weekday[dateDay.getDay()];
 	    var date = new Date().toJSON().slice(0,10);
 		var obiekt = {
-			tekst: "<p>" + tekstInput.value + "</p>" , 
+			tekst: "<p class=\"hyphenate\">" + tekstInput.value + "</p>" , 
 			data: "<h3>" +  n + ", "+ date +"</h3>"
 		}
 
