@@ -11,8 +11,6 @@ weekday[6] = "Saturday";
 
 
 
-
-
 var tablica = [];
 
 var addButton = document.getElementById("add-new");
@@ -34,13 +32,11 @@ function render()
 	}
 
 
-
 	//Rendering
 	var index;
 	for(index = tablica.length - 1; index >= 0; --index)
 	{
 		    var lix = document.createElement("li");
-			
 		    lix.innerHTML = tablica[index].data + " " + tablica[index].tekst + " " + "<div class=\"delete\"> Delete:  <input type=\"checkbox\"></div>";
 			parent.appendChild(lix);
 	}
@@ -63,8 +59,6 @@ function addElement()
 			data: "<h3>" +  n + ", "+ date +"</h3>"
 		}
 
-
-	
 		tablica.push(obiekt);
 		render();
 	}
