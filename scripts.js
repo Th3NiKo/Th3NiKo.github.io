@@ -9,7 +9,7 @@ weekday[4] = "Thursday";
 weekday[5] = "Friday";
 weekday[6] = "Saturday";
 
-
+mainId = 0;
 
 var tablica = [];
 
@@ -17,11 +17,12 @@ var addButton = document.getElementById("add-new");
 addButton.addEventListener("click", addElement, true);
 
 
-//var deleteButton = document.getElementById("delete-all");
-//deleteButton.addEventListener("click", deleteElements, true);
+var deleteButton = document.getElementById("delete-all");
+deleteButton.addEventListener("click", deleteElements, true);
+
+
 
 //Drawing things on list
-
 function render()
 {
 	// Clearing
@@ -37,7 +38,26 @@ function render()
 	for(index = tablica.length - 1; index >= 0; --index)
 	{
 		    var lix = document.createElement("li");
-		    lix.innerHTML = tablica[index].data + " " + tablica[index].tekst + " " + "<div class=\"delete\"> Delete:  <input type=\"checkbox\"></div>";
+		    var data = document.createElement("h3");
+		    var tekst = document.createElement("p");
+		   // var deleteTekst = document.createElement("");
+		    var czekbox = document.createElement("input");
+		    //lix.innerHTML = tablica[index].data + " " + tablica[index].tekst + " " + "<div class=\"delete\">  Delete:  <input id='" +  tablica[index].idObiektu + "' type=\"checkbox\"></div>";
+		    //lix.innerHTML = `${tablica[index].data} ${tablica[index].tekst}`;
+
+		    data.innerHTML = tablica[index].data;
+		    lix.appendChild(data);
+
+		    tekst.innerHTML = tablica[index].tekst;
+		    lix.appendChild(tekst);
+
+		   // deleteTekst.innerHTML = "Delete: ";
+		    //lix.appendChild(deleteTekst);
+			czekbox.id = index;
+		    czekbox.addEventListener("click", changeChecked);
+		    czekbox.type = "checkbox";
+		    lix.appendChild(czekbox);
+
 			parent.appendChild(lix);
 	}
 	
@@ -55,13 +75,38 @@ function addElement()
 		var n = weekday[dateDay.getDay()];
 	    var date = new Date().toJSON().slice(0,10);
 		var obiekt = {
+			checkedd: false,
 			tekst: "<p class=\"hyphenate\">" + tekstInput.value + "</p>" , 
-			data: "<h3>" +  n + ", "+ date +"</h3>"
-		}
+			data: n + ", "+ date ,
 
+
+		}
+		mainId++;
 		tablica.push(obiekt);
 		render();
 	}
 
 }
 
+function deleteElements()
+{
+	var index;
+	for(index = 0; index < tablica.length; index++)
+	{
+		if(tablica[index].checkedd == true)
+		{
+			 tablica.splice(index,1);	
+			 index--;
+		}
+	}
+	render();
+}
+
+
+function changeChecked(event)
+{
+	//var temp = getElementById(indexx + "");
+	//console.log(this.id,event);
+	tablica[this.id].checkedd = !tablica[this.id].checkedd;
+
+}
