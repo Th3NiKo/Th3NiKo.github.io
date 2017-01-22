@@ -1,0 +1,30 @@
+
+.obrazek {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 6px;
+}
+
+
+header {
+    color: #185f9b;
+    font-family: "Cambria";
+    text-align: center;
+
+}
+
+.myRow{
+
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#backButtonMy{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 150px;
+	height: 40px;
+}
